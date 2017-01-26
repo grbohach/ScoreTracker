@@ -10,8 +10,51 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.user.scoretracker.MainActivity">
 
-    <TextView
+    <Button
+        android:text="0"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/btnAway"
+        android:height="200dp"
+        android:width="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:textSize="100sp" />
+
+    <TextView
+        android:text="Away"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txtHome"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="79dp"
+        android:layout_marginEnd="79dp"
+        android:id="@+id/txtAway"
+        android:textSize="36sp" />
+
+    <TextView
+        android:text="Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtHome"
+        android:textSize="36sp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginStart="72dp"
+        android:layout_below="@+id/btnHome"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnHome"
+        android:height="200dp"
+        android:width="250dp"
+        android:textSize="100sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>
