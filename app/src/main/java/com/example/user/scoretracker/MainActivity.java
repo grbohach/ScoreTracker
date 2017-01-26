@@ -28,18 +28,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch(v.getId())
-        {
-            case R.id.btnHome:
-                String sHome = home.getText().toString();
-                int iHome = Integer.parseInt(sHome) + 1;
-                home.setText(Integer.toString(iHome));
-                break;
-            case R.id.btnAway:
-                String sAway = away.getText().toString();
-                int iAway = Integer.parseInt(sAway) + 1;
-                away.setText(Integer.toString(iAway));
-                break;
-        }
+        Button thisButton = (Button) v;
+        int oldScore = Integer.parseInt(thisButton.getText().toString());
+        oldScore++;
+        thisButton.setText(Integer.toString(oldScore));
     }
 }
