@@ -17,4 +17,16 @@
                 android:layout_height="match_parent"/>
         </menu>
     </item>
+    <item android:id="@+id/Sports"
+        android:title="Sports"
+        app:showAsAction="always">
+        <menu>
+            <item android:id="@+id/Basketball"
+                android:title="Basketball"
+                android:layout_height="match_parent"/>
+            <item android:id="@+id/Soccer"
+                android:title="Soccer"
+                android:layout_height="match_parent"/>
+        </menu>
+    </item>
 </menu>

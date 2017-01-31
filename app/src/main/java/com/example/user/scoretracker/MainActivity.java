@@ -1,5 +1,6 @@
 package com.example.user.scoretracker;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import static com.example.user.scoretracker.R.id.activity_basketball_score_tracker;
 import static com.example.user.scoretracker.R.id.home;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -39,16 +41,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 away.setText("0");
                 break;
             case R.id.decreaseHome:
-                Toast.makeText(this, "Home score reduced by 1", Toast.LENGTH_SHORT).show();
                 int oldScore = Integer.parseInt(home.getText().toString());
-                oldScore--;
+                if(oldScore > 0) {
+                    Toast.makeText(this, "Home score reduced by 1", Toast.LENGTH_SHORT).show();
+                    oldScore--;
+                }
                 home.setText(Integer.toString(oldScore));
                 break;
             case R.id.decreaseAway:
-                Toast.makeText(this, "Away score reduced by 1", Toast.LENGTH_SHORT).show();
                 oldScore = Integer.parseInt(away.getText().toString());
-                oldScore--;
+                if(oldScore > 0) {
+                    Toast.makeText(this, "Away score reduced by 1", Toast.LENGTH_SHORT).show();
+                    oldScore--;
+                }
                 away.setText(Integer.toString(oldScore));
+                break;
+            case R.id.Basketball:
+                Intent newIntent = new Intent(MainActivity.this, BasketballScoreTracker.class);
+                startActivity(newIntent);
+                this.finish();
                 break;
         }
 
