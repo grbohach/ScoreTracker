@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 away.setText(Integer.toString(oldScore));
                 break;
             case R.id.Basketball:
-                Intent newIntent = new Intent(MainActivity.this, BasketballScoreTracker.class);
+                Intent newIntent = new Intent("com.example.user.scoretracker.Basketball");
                 startActivity(newIntent);
                 this.finish();
                 break;

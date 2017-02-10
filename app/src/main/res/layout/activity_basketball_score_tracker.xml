@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_basketball_score_tracker"
     android:layout_width="match_parent"
@@ -8,117 +8,150 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.user.scoretracker.BasketballScoreTracker">
+    tools:context="com.example.user.scoretracker.BasketballScoreTracker"
+    android:orientation="vertical">
 
-    <TextView
-        android:text="Away"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtAway"
-        android:textSize="36sp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="79dp"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="18dp" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:id="@+id/txtHomeScore"
-        android:textSize="64sp"
-        android:height="75dp"
-        android:width="125dp"
-        android:layout_above="@+id/txtHome"
-        android:layout_alignRight="@+id/txtHome"
-        android:layout_alignEnd="@+id/txtHome" />
+        <Button
+            android:text="1"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHomeOne"
+            android:layout_weight="0.56"
+            android:layout_marginLeft="79dp"
+            android:layout_marginStart="79dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:text="2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHomeTwo"
-        android:layout_above="@+id/txtHomeScore"
-        android:layout_toStartOf="@+id/btnHomeThree"
-        android:layout_toLeftOf="@+id/btnHomeThree" />
+        <Button
+            android:text="3"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAwayThree"
+            android:layout_weight="1"
+            android:layout_below="@+id/btnAwayOne"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHomeThree"
-        android:layout_marginLeft="36dp"
-        android:layout_marginStart="36dp"
-        android:layout_below="@+id/btnHomeOne"
-        android:layout_alignLeft="@+id/txtHome"
-        android:layout_alignStart="@+id/txtHome" />
+        <Button
+            android:text="2"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAwayTwo"
+            android:layout_weight="1"
+            android:layout_marginRight="17dp"
+            android:layout_marginEnd="17dp"
+            android:layout_below="@+id/btnAwayOne"
+            android:layout_toLeftOf="@+id/btnAwayThree"
+            android:layout_toStartOf="@+id/btnAwayThree" />
 
-    <Button
-        android:text="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnHomeOne"
-        android:layout_above="@+id/btnHomeTwo"
-        android:layout_alignLeft="@+id/txtHomeScore"
-        android:layout_alignStart="@+id/txtHomeScore" />
+        <Button
+            android:text="2"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHomeTwo"
+            android:layout_below="@+id/btnHomeOne"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp" />
 
-    <TextView
-        android:text="0"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtAwayScore"
-        android:textSize="64sp"
-        android:height="75dp"
-        android:width="125dp"
-        android:layout_below="@+id/btnAwayTwo"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="67dp"
-        android:layout_marginEnd="67dp" />
+        <Button
+            android:text="3"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnHomeThree"
+            android:layout_width="125dp"
+            android:layout_weight="0.65"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_below="@+id/btnHomeOne"
+            android:layout_toRightOf="@+id/btnHomeTwo"
+            android:layout_toEndOf="@+id/btnHomeTwo" />
 
-    <Button
-        android:text="3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="33dp"
-        android:layout_marginStart="33dp"
-        android:id="@+id/btnAwayThree"
-        android:layout_alignBaseline="@+id/btnAwayTwo"
-        android:layout_alignBottom="@+id/btnAwayTwo"
-        android:layout_alignLeft="@+id/txtAway"
-        android:layout_alignStart="@+id/txtAway" />
+        <Button
+            android:text="1"
+            android:layout_width="125dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAwayOne"
+            android:layout_weight="0.52"
+            android:layout_marginRight="69dp"
+            android:layout_marginEnd="69dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
-    <Button
-        android:text="2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAwayTwo"
-        android:layout_below="@+id/btnAwayOne"
-        android:layout_toStartOf="@+id/txtAway" />
+    </RelativeLayout>
 
-    <Button
-        android:text="1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAwayOne"
-        android:layout_above="@+id/btnHomeThree"
-        android:layout_alignLeft="@+id/txtAwayScore"
-        android:layout_alignStart="@+id/txtAwayScore" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:text="Home"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtHome"
-        android:textSize="36sp"
-        android:layout_marginLeft="97dp"
-        android:layout_marginStart="97dp"
-        android:layout_alignBaseline="@+id/txtAway"
-        android:layout_alignBottom="@+id/txtAway"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        <TextView
+            android:text="0"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/txtHomeScore"
+            android:textSize="64sp"
+            android:height="75dp"
+            android:width="125dp"
+            android:layout_above="@+id/txtHome"
+            android:layout_alignRight="@+id/txtHome"
+            android:layout_alignEnd="@+id/txtHome"
+            android:textAlignment="center" />
 
-</RelativeLayout>
+        <TextView
+            android:text="0"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAwayScore"
+            android:textSize="64sp"
+            android:height="75dp"
+            android:width="125dp"
+            android:layout_below="@+id/btnAwayTwo"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="67dp"
+            android:layout_marginEnd="67dp"
+            android:textAlignment="center"
+            android:layout_width="382dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtHome"
+            android:textSize="36sp"
+            android:layout_marginLeft="97dp"
+            android:layout_marginStart="97dp"
+            android:layout_alignBaseline="@+id/txtAway"
+            android:layout_alignBottom="@+id/txtAway"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textAlignment="center" />
+
+        <TextView
+            android:text="Away"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtAway"
+            android:textSize="36sp"
+            android:layout_marginRight="83dp"
+            android:layout_marginEnd="83dp"
+            android:layout_weight="0.00"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+</LinearLayout>
